@@ -1,25 +1,8 @@
-from __future__ import print_function
-import argparse
-from math import log10
 
-import torch
-import time
-import h5py
 import numpy as np
-import torch.nn as nn
-import torch.optim as optim
-import copy
-from copy import deepcopy
-from torch.autograd import Variable
-from torch.utils.data import DataLoader, Dataset, TensorDataset
-from torch import FloatTensor
-from sklearn.model_selection import train_test_split
-from torchvision import transforms
-from accuracy_PSNR import mpsnr, mnrmse, mrmse, mnrmse_v2
-from skimage.measure import compare_mse
-import matplotlib.pyplot as plt
 from scipy import misc
-from skimage.measure import compare_psnr, compare_ssim, compare_mse, compare_nrmse
+import matplotlib.pyplot as plt
+from skimage.measure import compare_psnr
 
 
 def load_image(factor = 3):
